@@ -1,5 +1,6 @@
 {
   "name": "transactory",
+  "homepage": "https://white-axe.github.io/transactory",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
