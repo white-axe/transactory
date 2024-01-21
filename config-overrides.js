@@ -16,6 +16,15 @@ module.exports = function override(config, _env) {
     plugin.options.chunkFilename = `static/${NAMESPACE}/css/[name].[contenthash:8].chunk.css`;
   });
 
+  // Make sure that webpack uses the correct relative paths for fonts
+  config.module.rules.push({
+    test: /\.(otf|ttf|woff2?)/,
+    type: 'asset/resource',
+    generator: {
+      publicPath: '../',
+    },
+  });
+
   // Make sure that webpack sets the source code path for source maps properly
   config.devtool = false;
   config.plugins.push(new webpack.SourceMapDevToolPlugin({
