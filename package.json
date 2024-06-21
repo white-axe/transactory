@@ -23,11 +23,17 @@
     "react-dom": "18.2.0",
     "typescript": "4.9.5",
     "web-vitals": "2.1.4",
-    "whatwg-fetch": "3.6.2"
+    "whatwg-fetch": "3.6.2",
+    "ws": "^7.5.10"
   },
   "devDependencies": {
     "react-app-rewired": "2.2.1",
     "react-scripts": "5.0.1"
+  },
+  "overrides": {
+    "@ethersproject/providers": {
+      "ws": "$ws"
+    }
   },
   "scripts": {
     "start": "react-app-rewired start",
